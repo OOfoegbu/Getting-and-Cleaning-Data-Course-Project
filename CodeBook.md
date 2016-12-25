@@ -136,7 +136,9 @@ data_average <- dcast(data, subject + activity ~ measurements, mean)
 View(data_average)
  
 
- 
+The tidy data set "data_average" is saved as a text file in the working directory.
+Code:
+write.table(data_average, file = "data_average.txt", row.names = FALSE)
 
 
  

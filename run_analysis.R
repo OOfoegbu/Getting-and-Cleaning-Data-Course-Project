@@ -74,3 +74,6 @@ View(data)
 # for each measurement (signal, axial), for each activity, for each subject.
 data_average <- dcast(data, subject + activity ~ measurements, mean)
 View(data_average)
+
+# Saves the tidy data set data_average as a text file in the working directory
+write.table(data_average, file = "data_average.txt", row.names = FALSE)
